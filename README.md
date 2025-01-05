@@ -1,4 +1,3 @@
-# quiz-gem
 <h1>Quiz Gem</h1>
 <hr><p>This is a quiz game.</p>
 <p>Requirements:</p>
