@@ -26,5 +26,7 @@
 <p>Setup Page structure with html</p>
 <p>Style the quiz with css</p>
 <p>Use javascript to load questions one by one</p>
-<p>Deploy to netlify</p><h2>Contact</h2>
+<p>Deploy to netlify</p>
+<p>Done:
+Readme</p><h2>Contact</h2>
 <hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/joseph-silex/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a></p>
