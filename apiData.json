@@ -1,0 +1,125 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "What is the name of the protagonist&#039;s first Persona in &quot;Persona 5&quot;?",
+      "correct_answer": "Arsene",
+      "incorrect_answers": [
+        "Mara",
+        "Izanagi",
+        "Sandaphlon"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "Which of these Generation 1 Pokemon did NOT have an evolution in Generation 4?",
+      "correct_answer": "Jynx",
+      "incorrect_answers": [
+        "Electabuzz",
+        "Magmar",
+        "Rhydon"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Geography",
+      "question": "Which is the largest city in Morocco?",
+      "correct_answer": "Casablanca",
+      "incorrect_answers": [
+        "Rabat",
+        "Fes",
+        "Sale"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "Which of the following is not a studio album by the band Pink Floyd?",
+      "correct_answer": "Moving Pictures",
+      "incorrect_answers": [
+        "The Dark Side of the Moon",
+        "Wish You Were Here",
+        "Animals"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "History",
+      "question": "What was the original name of New York City?",
+      "correct_answer": "New Amsterdam",
+      "incorrect_answers": [
+        "New London",
+        "New Paris",
+        "New Rome"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Art",
+      "question": "Who painted The Starry Night?",
+      "correct_answer": "Vincent van Gogh",
+      "incorrect_answers": [
+        "Pablo Picasso",
+        "Leonardo da Vinci",
+        "Michelangelo"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "hard",
+      "category": "Entertainment: Video Games",
+      "question": "In the &quot;Devil May Cry&quot; franchise, which game is chronologically first?",
+      "correct_answer": "Devil May Cry 3: Dante&#039;s Awakening ",
+      "incorrect_answers": [
+        "Devil May Cry 4",
+        "Devil May Cry",
+        "Devil May Cry 2"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment: Video Games",
+      "question": "In the game The World Ends With You, all of these characters act as a game partner with Neku for a week except:",
+      "correct_answer": "Rhyme",
+      "incorrect_answers": [
+        "Shiki",
+        "Joshua",
+        "Beat"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Geography",
+      "question": "On which continent is the country of Angola located?",
+      "correct_answer": "Africa",
+      "incorrect_answers": [
+        "South America",
+        "Europe",
+        "Asia"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "The Korean War started in what year?",
+      "correct_answer": "1950",
+      "incorrect_answers": [
+        "1945",
+        "1960",
+        "1912"
+      ]
+    }
+  ]
+}
