@@ -1,0 +1,23 @@
+.question {
+    margin-bottom: 20px;
+}
+.question h2 {
+    font-size: 1.2em;
+}
+.question ul {
+    list-style-type: none;
+    padding: 0;
+}
+.question li {
+    margin: 5px 0;
+    cursor: pointer;
+}
+.question li.selected {
+    background-color: #d3d3d3; /* Highlight color */
+}
+.navigation {
+    margin-top: 20px;
+}
+.navigation button {
+    margin: 0 5px;
+}

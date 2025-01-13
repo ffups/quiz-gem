@@ -5,7 +5,7 @@
       "type": "multiple",
       "difficulty": "medium",
       "category": "Entertainment: Video Games",
-      "question": "What is the name of the protagonist&#039;s first Persona in &quot;Persona 5&quot;?",
+      "question": "What is the name of the protagonist's first Persona in \"Persona 5\"?",
       "correct_answer": "Arsene",
       "incorrect_answers": [
         "Mara",
@@ -77,8 +77,8 @@
       "type": "multiple",
       "difficulty": "hard",
       "category": "Entertainment: Video Games",
-      "question": "In the &quot;Devil May Cry&quot; franchise, which game is chronologically first?",
-      "correct_answer": "Devil May Cry 3: Dante&#039;s Awakening ",
+      "question": "In the \"Devil May Cry\" franchise, which game is chronologically first?",
+      "correct_answer": "Devil May Cry 3: Dante's Awakening",
       "incorrect_answers": [
         "Devil May Cry 4",
         "Devil May Cry",
