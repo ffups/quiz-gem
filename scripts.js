@@ -18,6 +18,21 @@ document.addEventListener('DOMContentLoaded', () => {
                     displayQuestion(data.results, currentIndex);
                 }
             });
+
+            document.getElementById('submit-button').addEventListener('click', () => {
+                const selectedAnswer = document.querySelector('.question li.selected');
+                if (!selectedAnswer) {
+                    alert('Please select an answer before submitting.');
+                    return;
+                }
+
+                const isCorrect = selectedAnswer.textContent === data.results[currentIndex].correct_answer;
+                if (isCorrect) {
+                    alert('Correct!');
+                } else {
+                    alert('Incorrect. The correct answer is: ' + data.results[currentIndex].correct_answer);
+                }
+            });
         })
         .catch(error => console.error('Error fetching data:', error));
 });
