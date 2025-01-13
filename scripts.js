@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.json())
         .then(data => {
             let currentIndex = 0;
-            const answeredQuestions = new Set();
-            displayQuestion(data.results, currentIndex);
+            const answeredQuestions = new Map(); // Use a Map to store the selected answer for each question
+            displayQuestion(data.results, currentIndex, answeredQuestions);
 
             const nextButton = document.getElementById('next-button');
             nextButton.style.display = 'none'; // Hide the next button initially
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('next-button').addEventListener('click', () => {
                 if (currentIndex < data.results.length - 1) {
                     currentIndex++;
-                    displayQuestion(data.results, currentIndex);
+                    displayQuestion(data.results, currentIndex, answeredQuestions);
                     if (answeredQuestions.has(currentIndex)) {
                         nextButton.style.display = 'inline'; // Show the next button if the question is already answered
                     } else {
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('prev-button').addEventListener('click', () => {
                 if (currentIndex > 0) {
                     currentIndex--;
-                    displayQuestion(data.results, currentIndex);
+                    displayQuestion(data.results, currentIndex, answeredQuestions);
                     nextButton.style.display = 'inline'; // Show the next button for previously answered questions
                 }
             });
@@ -43,14 +43,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     alert('Incorrect. The correct answer is: ' + data.results[currentIndex].correct_answer);
                 }
 
-                answeredQuestions.add(currentIndex); // Mark the question as answered
+                answeredQuestions.set(currentIndex, selectedAnswer.textContent); // Store the selected answer
                 nextButton.style.display = 'inline'; // Show the next button after submission
+                displayQuestion(data.results, currentIndex, answeredQuestions); // Refresh the question to highlight the correct answer
             });
         })
         .catch(error => console.error('Error fetching data:', error));
 });
 
-function displayQuestion(results, index) {
+function displayQuestion(results, index, answeredQuestions) {
     const container = document.getElementById('data-container');
     container.innerHTML = ''; // Clear any existing content
 
@@ -64,9 +65,8 @@ function displayQuestion(results, index) {
 
     const answersList = document.createElement('ul');
 
-    // Combine correct and incorrect answers, then shuffle them
+    // Combine correct and incorrect answers without shuffling
     const answers = [item.correct_answer, ...item.incorrect_answers];
-    answers.sort(() => Math.random() - 0.5);
 
     answers.forEach(answer => {
         const answerItem = document.createElement('li');
@@ -84,4 +84,18 @@ function displayQuestion(results, index) {
 
     questionElement.appendChild(answersList);
     container.appendChild(questionElement);
+
+    // Highlight the correct answer if the question has been answered
+    if (answeredQuestions.has(index)) {
+        const selectedAnswer = answeredQuestions.get(index);
+        const allAnswers = answersList.querySelectorAll('li');
+        allAnswers.forEach(li => {
+            if (li.textContent === selectedAnswer) {
+                li.classList.add('selected');
+            }
+            if (li.textContent === item.correct_answer) {
+                li.classList.add('correct');
+            }
+        });
+    }
 }
