@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz Gem</title>
     <script src="scripts.js" defer></script>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <div class="container">
-    <h1>Quiz Gem</h1>
-    <div id="data-container"></div>
-    <div class="navigation">
-        <button id="prev-button">Previous</button>
-        <button id="next-button">Next</button>
-        <button id="submit-button">Submit</button>
+      <h1>Quiz Gem</h1>
+      <div id="data-container"></div>
+      <div class="navigation">
+        <div class="submit">
+          <button id="submit-button">Submit</button>
+        </div>
+        <div class="pagination">    
+          <button id="prev-button">Previous</button>
+          <button id="next-button">Next</button>
+        </div>
+      </div>
     </div>
-</div>
-</body>
+  </body>
 </html>
