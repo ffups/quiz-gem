@@ -45,10 +45,53 @@ h1 {
 .question li.correct {
   background-color: #09f12495; /* Correct answer highlight color */
 }
-.navigation {
-  margin-top: 20px;
-}
-.navigation button {
-  margin: 0 5px;
+#submit-button {
+    background-color: #4c82af; /* Green background */
+    color: #5a5454; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block display to make it the only thing on its line */
+    font-size: 36px; /* Font size */
+    margin: 20px auto; /* Center the button and add vertical margin */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.1s ease, color 0.1s ease; /* Smooth transition */
 }
 
+#submit-button:hover {
+    background-color: #086bbc; /* Darker green on hover */
+    color: rgb(0, 0, 0);
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Add space between the buttons */
+}
+
+#prev-button, #next-button {
+    background-color: #4c82af; /* Green background */
+    color: #5a5454; /* White text */
+    border: none; /* Remove border */
+    padding: 15px 32px; /* Padding */
+    text-align: center; /* Center text */
+    text-decoration: none; /* Remove underline */
+    font-size: 30px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition: background-color 0.1s ease, color 0.1s ease; /* Smooth transition */
+}
+
+#prev-button:hover, #next-button:hover {
+    background-color: #086bbc; /* Darker green on hover */
+    color: rgb(0, 0, 0);
+}
