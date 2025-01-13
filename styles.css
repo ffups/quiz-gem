@@ -15,6 +15,9 @@
 .question li.selected {
     background-color: #d3d3d3; /* Highlight color */
 }
+.question li.correct {
+    background-color: #90ee90; /* Correct answer highlight color */
+}
 .navigation {
     margin-top: 20px;
 }
