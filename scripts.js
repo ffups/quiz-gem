@@ -65,7 +65,7 @@ function displayQuestion(results, index, answeredQuestions) {
 
     const answersList = document.createElement('ul');
 
-    // Combine correct and incorrect answers without shuffling
+    // Combine correct and incorrect answers
     const answers = [item.correct_answer, ...item.incorrect_answers];
 
     answers.forEach(answer => {

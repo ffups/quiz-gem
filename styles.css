@@ -40,28 +40,28 @@ h1 {
     font-weight: bold;
 }
 .question li.selected {
-  background-color: #4e1070; /* Highlight color */
+  background-color: #4e1070;
 }
 .question li.correct {
-  background-color: #09f12495; /* Correct answer highlight color */
+  background-color: #09f12495;
 }
 #submit-button {
-    background-color: #4c82af; /* Green background */
-    color: #5a5454; /* White text */
-    border: none; /* Remove border */
-    padding: 15px 32px; /* Padding */
-    text-align: center; /* Center text */
-    text-decoration: none; /* Remove underline */
-    display: block; /* Block display to make it the only thing on its line */
-    font-size: 36px; /* Font size */
-    margin: 20px auto; /* Center the button and add vertical margin */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 12px; /* Rounded corners */
-    transition: background-color 0.1s ease, color 0.1s ease; /* Smooth transition */
+    background-color: #4c82af;
+    color: #5a5454; 
+    border: none; 
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block; 
+    font-size: 36px;
+    margin: 20px auto;
+    cursor: pointer; 
+    border-radius: 12px;
+    transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 #submit-button:hover {
-    background-color: #086bbc; /* Darker green on hover */
+    background-color: #086bbc;
     color: rgb(0, 0, 0);
 }
 
@@ -74,24 +74,24 @@ h1 {
 
 .pagination {
     display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    gap: 10px; /* Add space between the buttons */
+    justify-content: center; 
+    gap: 10px;
 }
 
 #prev-button, #next-button {
-    background-color: #4c82af; /* Green background */
-    color: #5a5454; /* White text */
-    border: none; /* Remove border */
-    padding: 15px 32px; /* Padding */
-    text-align: center; /* Center text */
-    text-decoration: none; /* Remove underline */
-    font-size: 30px; /* Font size */
-    cursor: pointer; /* Pointer cursor on hover */
-    border-radius: 12px; /* Rounded corners */
-    transition: background-color 0.1s ease, color 0.1s ease; /* Smooth transition */
+    background-color: #4c82af;
+    color: #5a5454; 
+    border: none; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none; 
+    font-size: 30px; 
+    cursor: pointer; 
+    border-radius: 12px;
+    transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 #prev-button:hover, #next-button:hover {
-    background-color: #086bbc; /* Darker green on hover */
+    background-color: #086bbc; 
     color: rgb(0, 0, 0);
 }
