@@ -14,11 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         if (currentIndex < data.results.length - 1) {
           currentIndex++;
           displayQuestion(data.results, currentIndex, answeredQuestions);
-          if (answeredQuestions.has(currentIndex)) {
-            nextButton.style.display = "inline"; // Show the next button if the question is already answered
-          } else {
-            nextButton.style.display = "none"; // Hide the next button until the next answer is submitted
-          }
+          // could be simplified using a ternary operator
+          nextButton.style.display = answeredQuestions.has(currentIndex)
+            ? "inline"
+            : "none";
         }
       });
 
@@ -40,14 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const isCorrect =
           selectedAnswer.textContent ===
           data.results[currentIndex].correct_answer;
-        if (isCorrect) {
-          alert("Correct!");
-        } else {
-          alert(
-            "Incorrect. The correct answer is: " +
-              data.results[currentIndex].correct_answer
-          );
-        }
+
+        // this could be simplified by using a ternary operator
+        alert(
+          isCorrect
+            ? "Correct!"
+            : "Incorrect. The correct answer is: " +
+                data.results[currentIndex].correct_answer
+        );
 
         answeredQuestions.set(currentIndex, selectedAnswer.textContent); // Store the selected answer
         nextButton.style.display = "inline"; // Show the next button after submission
@@ -59,7 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function displayQuestion(results, index, answeredQuestions) {
   const container = document.getElementById("data-container");
-  container.innerHTML = ""; // Clear any existing content
+  // use textContent instead of innerHTML
+  container.textContent = ""; // Clear any existing content
 
   const item = results[index];
   const questionElement = document.createElement("div");
@@ -95,13 +95,10 @@ function displayQuestion(results, index, answeredQuestions) {
   if (answeredQuestions.has(index)) {
     const selectedAnswer = answeredQuestions.get(index);
     const allAnswers = answersList.querySelectorAll("li");
+    // this can be simplified for readability
     allAnswers.forEach((li) => {
-      if (li.textContent === selectedAnswer) {
-        li.classList.add("selected");
-      }
-      if (li.textContent === item.correct_answer) {
-        li.classList.add("correct");
-      }
+      li.classList.toggle("selected", li.textContent === selectedAnswer);
+      li.classList.toggle("correct", li.textContent === item.correct_answer);
     });
   }
 }
