@@ -78,7 +78,7 @@ h1 {
     gap: 10px;
 }
 
-#prev-button, #next-button {
+#next-button {
     background-color: #4c82af;
     color: #5a5454; 
     border: none; 
@@ -91,7 +91,10 @@ h1 {
     transition: background-color 0.1s ease, color 0.1s ease;
 }
 
-#prev-button:hover, #next-button:hover {
+ #next-button:hover {
     background-color: #086bbc; 
     color: rgb(0, 0, 0);
-}
+ }
+ #prev-button {
+  display: none;
+ }
